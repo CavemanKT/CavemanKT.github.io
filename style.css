@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Gochi+Hand&family=Ubuntu:wght@300&display=swap');
+
+:root {
+    /* color */
+    --primary-bg-color: white;
+    --primary-font-color: #716F81;
+    --secondary-font-color:white;
+    --primary-theme-color: #BCFFB9;
+    --secondary-theme-color: #F5FDB0;
+    --tertiary-theme-color: #F7E6AD;
+    --quaternary-theme-color: #28FFBF;
+    /* font style */
+    --Allura: 'Allura', cursive;
+    --Gochi-Hand: 'Gochi Hand', cursive;
+    --Ubuntu: 'Ubuntu', sans-serif;
+}
+
+[data-theme="dark"] {
+    /* color */
+    --primary-bg-color: #001E6C;
+    --primary-font-color: #F2E1C1;
+    --secondary-font-color: #6B4C05;
+    --primary-theme-color: #035397;
+    --secondary-theme-color: #5089C6;
+    --tertiary-theme-color: #FFAA4C;
+    --quaternary-theme-color: #053742;
+    /* font style */
+    --Allura: 'Allura', cursive;
+    --Gochi-Hand: 'Gochi Hand', cursive;
+    --Ubuntu: 'Ubuntu', sans-serif;
+}
+
+/* Entire Layout */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--primary-font-color);
+    background-color: var(--primary-bg-color);
+    
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    user-select: none;
+}
+
+* {
+    margin: 0;
+}
+
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    left: 25px;
+    top: 30px;
+}
+  
+.theme-switch-wrapper span {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+  
+.toggle-text {
+    position: relative;
+    top: -4px;
+    right: 5px;
+    color: var(--on-background);
+}
+  
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+  
+.theme-switch input {
+    display: none;
+}
+  
+.slider {
+    background: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+  
+.slider::before {
+    background: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+  
+input:checked + .slider {
+    background: var(--primary-font-color);
+}
+  
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round::before {
+    border-radius: 50%;
+    background-color: var(--primary-bg-color);
+}
+  
+.fas {
+    font-size: 30px;
+    margin-right: 5px;
+}
+/* End of Switch wrapper */
+
+
+/* nav */
+
+nav {
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    font-family: var(--Gochi-Hand);
+    font-size: 33px;
+    letter-spacing: 3px;
+    justify-content: flex-end;
+    padding: 20px;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 15px;
+}
+
+.nav-list a {
+    margin-right: 25px;
+    color: var(--primary-font-color);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+    outline: none;
+    user-select: none;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    text-shadow: 3px 3px 0px var(--primary-font-color);
+}
+
+.nav-list a:active {
+    transform: translate(9px, 9px);
+    text-shadow: none;
+}
+
+/* about section */
+.about {
+    background-color: var(--quaternary-theme-color);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(./img/shh.JPG); */
+}
+
+
+#wrapper-about h1 {
+    font-family: var(--Allura);
+    font-size: 70px;
+    font-weight: 600;
+}
+
+#wrapper-about p {
+    font-family:var(--Ubuntu);
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--secondary-font-color);
+}
+
+/* arrows */
+.arrow-down img {
+    width: 4rem;
+    display: flex;
+    margin: auto;
+}
+
+
+/* projects section */
+.projects {
+    background-color: var(--primary-theme-color);
+    min-height: 100vh;
+    width: 100%;
+    /* padding: 10px; */
+}
+
+.section-header {
+    justify-content: center;
+    display: flex;
+    padding: 50px;
+    font-family: var(--Gochi-Hand);
+    font-size: 60px;
+}
+
+.wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 1rem 40px;
+}
+
+.wrapper-grid a {
+    height: 100%;
+    background-color: var(--secondary-theme-color);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+    width: 100%;
+    /* object-fit: cover; */
+    height: calc(100% - 6.8rem);
+}
+
+.project-title {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0.5rem;
+    font-family:var(--Ubuntu);
+    font-weight: 900;
+    font-size: 19px;
+    /* background-color: var(--primary-font-color); */
+    color:var(--primary-font-color);
+}
+
+.project-title > .code {
+    opacity: 0;
+    transition: all 0.5s;
+    color: rgb(0, 224, 150);
+}
+
+.wrapper-grid a:hover .code {
+    opacity: 1;
+}
+
+.projects-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;   
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--Ubuntu);
+    height: 0.5rem;
+    width: 10rem;
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    color: #FE9898;
+    transition: background-color 0.3s ease-out;
+}
+
+
+.projects-btn:hover {
+    background-color: var(--quaternary-theme-color);
+    color: white;
+    border-radius: 5px;
+}
+
+.fas {
+    transition: transform 0.3s ease-out;
+}
+
+.projects-btn:hover .fas{
+    transform: translateX(10px);
+}
+
+/* contacat section */
+.contact {
+    min-height: 100vh;
+    background-color: var(--tertiary-theme-color);
+    color: var(--primary-font-color);   
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact > .wrapper {
+    margin: 2rem auto;
+    font-family: var(--Allura);
+    font-size: 4rem;
+
+} 
+
+.contact-links {
+    margin-top: 2rem; 
+}
+
+.contact-details {
+    color: var(--primary-font-color);
+    font-size: 1.6rem; 
+    margin: 0 0.6rem;
+    display: inline-block;
+}
+
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer > p {
+    
+    display: block;
+    margin: 30px;
+}
+
+.logo {
+    width: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+    .contact > .wrapper {
+        font-size: 2.2rem;     
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .theme-switch-wrapper {
+        top: 13px;
+        left:10px;
+    }
+
+    .toggle-text {
+        display: none;
+    }
+
+/* nav bar */
+    nav {
+        font-size: 1rem;
+
+    }
+    
+/* about section */
+    #wrapper-about h1 {
+        font-size: 2.5rem;
+    }
+    
+    #wrapper-about p {
+        font-size: 1.5rem;
+    }
+
+/* Projects section */
+    .section-header {
+        font-size: 2rem;
+    }
+
+    .wrapper-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .projects-btn {
+        font-size: 1.5rem;
+    }
+
+
+
+/* contact section */
+    .contact > .wrapper {
+        font-size: 1.5rem;
+    }    
+    .contact-details {
+        font-size: 1rem;
+    }
+}
