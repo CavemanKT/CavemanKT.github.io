@@ -4,7 +4,7 @@
     /* color */
     --primary-bg-color: white;
     --primary-font-color: #716F81;
-    --secondary-font-color:white;
+    --secondary-font-color: white;
     --primary-theme-color: #BCFFB9;
     --secondary-theme-color: #F5FDB0;
     --tertiary-theme-color: #F7E6AD;
@@ -40,7 +40,7 @@ body {
     margin: 0;
     color: var(--primary-font-color);
     background-color: var(--primary-bg-color);
-    
+
 }
 
 a {
@@ -62,30 +62,30 @@ a {
     left: 25px;
     top: 30px;
 }
-  
+
 .theme-switch-wrapper span {
     margin-right: 10px;
     font-size: 1rem;
 }
-  
+
 .toggle-text {
     position: relative;
     top: -4px;
     right: 5px;
     color: var(--on-background);
 }
-  
+
 .theme-switch {
     display: inline-block;
     height: 34px;
     position: relative;
     width: 60px;
 }
-  
+
 .theme-switch input {
     display: none;
 }
-  
+
 .slider {
     background: #ccc;
     bottom: 0;
@@ -96,7 +96,7 @@ a {
     top: 0;
     transition: 0.4s;
 }
-  
+
 .slider::before {
     background: #fff;
     bottom: 4px;
@@ -107,28 +107,29 @@ a {
     transition: 0.4s;
     width: 26px;
 }
-  
-input:checked + .slider {
+
+input:checked+.slider {
     background: var(--primary-font-color);
 }
-  
-input:checked + .slider::before {
+
+input:checked+.slider::before {
     transform: translateX(26px);
 }
-  
+
 .slider.round {
     border-radius: 34px;
 }
-  
+
 .slider.round::before {
     border-radius: 50%;
     background-color: var(--primary-bg-color);
 }
-  
+
 .fas {
     font-size: 30px;
     margin-right: 5px;
 }
+
 /* End of Switch wrapper */
 
 
@@ -193,7 +194,7 @@ nav ul {
 }
 
 #wrapper-about p {
-    font-family:var(--Ubuntu);
+    font-family: var(--Ubuntu);
     font-size: 40px;
     font-weight: 600;
     color: var(--secondary-font-color);
@@ -238,7 +239,7 @@ nav ul {
 
 .project-image {
     width: 100%;
-    /* object-fit: cover; */
+    object-fit: cover;
     height: calc(100% - 6.8rem);
 }
 
@@ -246,14 +247,14 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 2rem 0.5rem;
-    font-family:var(--Ubuntu);
+    font-family: var(--Ubuntu);
     font-weight: 900;
     font-size: 19px;
     /* background-color: var(--primary-font-color); */
-    color:var(--primary-font-color);
+    color: var(--primary-font-color);
 }
 
-.project-title > .code {
+.project-title>.code {
     opacity: 0;
     transition: all 0.5s;
     color: rgb(0, 224, 150);
@@ -267,7 +268,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;   
+    text-align: center;
     font-size: 2rem;
     font-weight: 700;
     font-family: var(--Ubuntu);
@@ -290,7 +291,7 @@ nav ul {
     transition: transform 0.3s ease-out;
 }
 
-.projects-btn:hover .fas{
+.projects-btn:hover .fas {
     transform: translateX(10px);
 }
 
@@ -298,7 +299,7 @@ nav ul {
 .contact {
     min-height: 100vh;
     background-color: var(--tertiary-theme-color);
-    color: var(--primary-font-color);   
+    color: var(--primary-font-color);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -306,20 +307,20 @@ nav ul {
     justify-content: center;
 }
 
-.contact > .wrapper {
+.contact>.wrapper {
     margin: 2rem auto;
     font-family: var(--Allura);
     font-size: 4rem;
 
-} 
+}
 
 .contact-links {
-    margin-top: 2rem; 
+    margin-top: 2rem;
 }
 
 .contact-details {
     color: var(--primary-font-color);
-    font-size: 1.6rem; 
+    font-size: 1.6rem;
     margin: 0 0.6rem;
     display: inline-block;
 }
@@ -331,48 +332,49 @@ footer {
     justify-content: space-evenly;
 }
 
-footer > p {
-    
+footer>p {
+
     display: block;
     margin: 30px;
 }
 
 .logo {
     width: 100px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 1000px) {
-    .contact > .wrapper {
-        font-size: 2.2rem;     
+    .contact>.wrapper {
+        font-size: 2.2rem;
     }
 }
 
 @media screen and (max-width: 750px) {
     .theme-switch-wrapper {
         top: 13px;
-        left:10px;
+        left: 10px;
     }
 
     .toggle-text {
         display: none;
     }
 
-/* nav bar */
+    /* nav bar */
     nav {
         font-size: 1rem;
 
     }
-    
-/* about section */
+
+    /* about section */
     #wrapper-about h1 {
         font-size: 2.5rem;
     }
-    
+
     #wrapper-about p {
         font-size: 1.5rem;
     }
 
-/* Projects section */
+    /* Projects section */
     .section-header {
         font-size: 2rem;
     }
@@ -388,10 +390,11 @@ footer > p {
 
 
 
-/* contact section */
-    .contact > .wrapper {
+    /* contact section */
+    .contact>.wrapper {
         font-size: 1.5rem;
-    }    
+    }
+
     .contact-details {
         font-size: 1rem;
     }
