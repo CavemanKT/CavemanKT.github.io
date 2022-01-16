@@ -1,4 +1,3 @@
-        AOS.init();
 
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const toggleIcon = document.getElementById('toggle-icon');
