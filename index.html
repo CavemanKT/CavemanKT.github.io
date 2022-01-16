@@ -7,6 +7,8 @@
     <link rel="icon" type="image/jpg" href="">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <!-- Dark Mode Switch -->
@@ -62,7 +64,12 @@
         <h2 class="section-header">
             Projects Exhibition Hall
         </h2>
-        <div class="wrapper-grid" id="wrapper-grid">
+        <div
+            class="wrapper-grid"
+            id="wrapper-grid"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
 
             <!-- Vanilla Javascript  -->
             <a href="https://tkdy9.csb.app/">
@@ -118,6 +125,18 @@
                     <span class="code"> &nbsp;</span>
                 </p>
             </a>
+
+            <!-- Google Auth Integration -->
+            <a href="https://github.com/CavemanKT/GOOGLE_AUTH_with_firebase">
+                <img class="project-image" src="./img/googleAuth.png" alt="Google Auth Integration">
+                <p class="project-title">
+                    <span class="code">&nbsp; </span>
+                    <!-- project title -->
+                    Google Auth Integration(next.js)
+                    <span class="code"> &nbsp;</span>
+                </p>
+            </a>
+
 
         </div>
         <!-- <a href="" class="projects-btn" target="_blank">
@@ -179,6 +198,6 @@
     <!-- End of footer -->
 
     <!-- js source -->
-    <script src="script.js"></>
+    <script src="script.js"></script>
 </body>
 </html>
