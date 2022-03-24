@@ -233,7 +233,13 @@ nav ul {
     margin: 1rem 40px;
 }
 
-.wrapper-grid a {
+.wrapper-grid .project-frame {
+    height: 100%;
+    background-color: var(--secondary-theme-color);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper-grid .project-caption {
     height: 100%;
     background-color: var(--secondary-theme-color);
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
