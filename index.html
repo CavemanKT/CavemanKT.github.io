@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"
+        integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 </head>
 
 <body>
@@ -67,6 +70,23 @@
             Projects Exhibition Hall
         </h2>
         <div class="wrapper-grid" id="wrapper-grid" data-aos="fade-down" data-aos-easing="linear"
+            data-aos-duration="1500">
+
+            <!-- Vanilla Javascript  -->
+            <a class="project-frame" href="./p5js/guessNumber/index.html" target="_blank">
+                <img class="project-image" src="./img/p5-projects/guessNumber.png" alt="p5-project-cover">
+                <p class="project-title">
+                    <span class="code">&nbsp; </span>
+                    <!-- project title // can make a dropdown description-->
+                    press number (p5.js)
+                    <span class="code"> &nbsp;</span>
+                </p>
+            </a>
+        </div>
+
+        <!-- full stack projects -->
+
+        <div class=" wrapper-grid" id="wrapper-grid" data-aos="fade-down" data-aos-easing="linear"
             data-aos-duration="1500">
             <!-- Vanilla Javascript  -->
             <a class="project-frame" href="https://tkdy9.csb.app/">
@@ -204,6 +224,8 @@
 
     <!-- js source -->
     <script src="script.js" defer></script>
+    <!-- <script src="sketch.js" defer></script> -->
+
 </body>
 
 </html>
